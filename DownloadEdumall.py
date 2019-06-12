@@ -80,7 +80,7 @@ def Login(User, Pass):
 				'authenticity_token' : authenticity_token[1]
 		}
 	try:
-		url = 'https://edumall.vn/users/sign_in'
+		url = 'https://sso.edumall.vn/users/sign_in'
 		r = g_session.post(url, data = payload)
 		if r.status_code != 200:
 			logger.warning("Loi dang nhap")
@@ -104,7 +104,7 @@ def GetCourses():
 	..............: Failure - Returns list is None
 	Author........: Zero-0
 	'''
-	url = 'https://edumall.vn/users/my_courses'
+	url = 'https://lms.edumall.vn/home/my-course/learning'
 	try:
 		r = g_session.get(url)
 		if r.status_code != 200:
